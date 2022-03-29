@@ -10,6 +10,10 @@
 	<link href="css/cornell.css" rel="stylesheet">
 	<link href="css/cwd_utilities.css" rel="stylesheet">
 	
+	<!-- Activate for Cornell.edu typography and basic patterns -->
+	<!-- <link rel="stylesheet" href="https://use.typekit.net/nwp2wku.css"> -->
+	<!-- <link href="css/cwd_patterns.css" rel="stylesheet"> -->
+	
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -24,174 +28,176 @@
 
 	<div id="skipnav"><a href="#main">Skip to main content</a></div>
 	
-<!-- Start Cornell Branding ////////////////////////////////////////////// -->	
-	<header id="cu-header">
-		<div id="cu-search" class="cu-search">
-			<div class="container-fluid">
-				<form id="cu-search-form" tabindex="-1" role="search" action="https://www.cornell.edu/search/">
-					<label for="cu-search-query" class="sr-only">Search:</label>
-					<input type="text" id="cu-search-query" name="q" value="" size="30">
-					<button name="btnG" id="cu-search-submit" type="submit" value="go"><span class="sr-only">Submit Search</span></button>
+	<div class="band" id="super-header">
+		<!-- Start Cornell Branding ////////////////////////////////////////////// -->	
+		<header id="cu-header">
+			<div id="cu-search" class="cu-search">
+				<div class="container-fluid">
+					<form id="cu-search-form" tabindex="-1" role="search" action="https://www.cornell.edu/search/">
+						<label for="cu-search-query" class="sr-only">Search:</label>
+						<input type="text" id="cu-search-query" name="q" value="" size="30">
+						<button name="btnG" id="cu-search-submit" type="submit" value="go"><span class="sr-only">Submit Search</span></button>
 
-					<fieldset class="search-filters" role="radiogroup">
-						<legend class="sr-only">Search Filters</legend>
-						<input type="radio" id="cu-search-filter1" name="sitesearch" value="thissite" checked="checked">
-						<label for="cu-search-filter1"><span class="sr-only">Search </span>This Site</label> 
-						<input type="radio" id="cu-search-filter2" name="sitesearch" value="cornell">
-						<label for="cu-search-filter2"><span class="sr-only">Search </span>Cornell</label>
-					</fieldset>
-				</form>
+						<fieldset class="search-filters" role="radiogroup">
+							<legend class="sr-only">Search Filters</legend>
+							<input type="radio" id="cu-search-filter1" name="sitesearch" value="thissite" checked="checked">
+							<label for="cu-search-filter1"><span class="sr-only">Search </span>This Site</label> 
+							<input type="radio" id="cu-search-filter2" name="sitesearch" value="cornell">
+							<label for="cu-search-filter2"><span class="sr-only">Search </span>Cornell</label>
+						</fieldset>
+					</form>
+				</div>
 			</div>
-		</div>
-		<div class="cu45-helper"></div>
-		<div class="container-fluid cu-brand">
-			<h1 class="cu-logo"><a href="https://www.cornell.edu"><img class="sr-only" src="images/cornell/bold_cornell_logo_simple_b31b1b.svg" alt="Cornell University" width="245" height="62"></a></h1>
-			<div class="cu-unit">
-				<h2>Cornell CSS Framework</h2>
-				<h3 class="sans">Custom Development</h3>
+			<div class="cu45-helper"></div>
+			<div class="container-fluid cu-brand">
+				<h1 class="cu-logo"><a href="https://www.cornell.edu"><img class="sr-only" src="images/cornell/bold_cornell_logo_simple_b31b1b.svg" alt="Cornell University" width="245" height="62"></a></h1>
+				<div class="cu-unit">
+					<h2>Cornell CSS Framework</h2>
+					<h3 class="sans">Custom Development</h3>
+				</div>
+				<div class="buttons">
+					<button class="mobile-button" id="mobile-nav">Main Menu</button>
+					<button class="mobile-button" id="cu-search-button">Toggle Search Form</button>
+				</div>
 			</div>
-			<div class="buttons">
-				<button class="mobile-button" id="mobile-nav">Main Menu</button>
-				<button class="mobile-button" id="cu-search-button">Toggle Search Form</button>
-			</div>
-		</div>
-	</header>
-<!-- End Cornell Branding \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+		</header>
+		<!-- End Cornell Branding \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
-	<header id="site-header" aria-label="Site Banner">
+		<header id="site-header" aria-label="Site Banner">
 		
-		<nav class="dropdown-menu dropdown-menu-on-demand" id="main-navigation" aria-label="Main Navigation">
-			<div class="container-fluid">
-				<a id="mobile-home" href="#"><span class="sr-only">Home</span></a>
-				<ul class="list-menu links">
-					<li class="active parent"><a href="index.html">Template</a>
-						<ul class="list-menu links vertical children">
-							<li><a href="index21.html">Template (2021 Components)</a></li>
-						</ul>
-					</li>
-					<li class="parent"><a href="style.html">Styleguide</a>
-						<ul class="list-menu links vertical children">
-							<li><a href="patterns.html">Design Patterns</a></li>
-							<li><a href="patterns_people.html">People</a></li>
-							<li><a href="forms.html">Forms</a></li>
-							<li><a href="tables.html">Tables (Responsive)</a></li>
-							<li><a href="style_customer.html">Customer Styleguide</a></li>
-						</ul>
-					</li>
-					<li class="parent"><a href="drupal.html">Drupal Components</a>
-						<ul class="list-menu links vertical children">
-							<li><a href="cms_drupal.html">Drupal CMS</a></li>
-						</ul>
-					</li>
-					<li><a href="js.html">Scripted Components</a></li>
-					<li class="parent"><a href="#">Tone's Projects</a>
-						<ul class="list-menu links vertical children">
-							<li><a href="projects/project.html">Starter Project</a></li>
-							<li class="menu-section"><a href="login_cuwa.html">CU Login</a></li>
-							<li class="menu-section parent"><a href="projects/cbb.html">Bright Beams Secondary</a>
-								<ul class="list-menu links vertical children">
-									<li><a href="projects/cbb_home.html">Bright Beams Home</a></li>
-								</ul>
-							</li>
-							<li class="parent"><a href="projects/diversity.html">Diversity Secondary</a>
-								<ul class="list-menu links vertical children">
-									<li><a href="projects/diversity_home.html">Diversity Home</a></li>
-									<li><a href="projects/diversity_belonging.html">Diversity Belonging</a></li>
-								</ul>
-							</li>
-							<li class="parent"><a href="projects/einaudi.html">Einaudi Secondary</a>
-								<ul class="list-menu links vertical children">
-									<li><a href="projects/einaudi_home.html">Einaudi Home</a></li>
-									<li><a href="projects/einaudi_program.html">Einaudi Program</a></li>
-									<li class="menu-section"><a href="projects/einaudi_home_global.html">Einaudi-Global Home</a></li>
-									<li><a href="projects/einaudi_program_global.html">Einaudi-Global Program</a></li>
-									<li><a href="projects/einaudi_global.html">Einaudi-Global Secondary</a></li>
-									<li><a href="projects/einaudi_global_landing.html">Einaudi-Global Landing</a></li>
-								</ul>
-							</li>
-							<li class="parent"><a href="projects/fcs.html">FCS Secondary</a>
-								<ul class="list-menu links vertical children">
-									<li><a href="projects/fcs_home.html">FCS Home</a></li>
-									<li><a href="projects/fcs_ct.html">FCS Components</a></li>
-								</ul>
-							</li>
-							<li class="parent"><a href="projects/ogl.html">Global Learning Secondary</a>
-								<ul class="list-menu links vertical children">
-									<li><a href="projects/ogl_home.html">Global Learning Home</a></li>
-									<li><a href="projects/ogl_search.html">Global Learning Search</a></li>
-								</ul>
-							</li>
-							<li class="parent"><a href="projects/itc.html">IT@Cornell</a>
-								<ul class="list-menu links vertical children">
-									<li><a href="projects/itc_home.html">IT@Cornell Home</a></li>
-								</ul>
-							</li>
-							<li class="parent"><a href="projects/lassp.html">LASSP Secondary</a>
-								<ul class="list-menu links vertical children">
-									<li><a href="projects/lassp_home.html">LASSP Home</a></li>
-								</ul>
-							</li>
-							<li class="parent"><a href="projects/migrations.html">Migrations Secondary</a>
-								<ul class="list-menu links vertical children">
-									<li><a href="projects/migrations_home.html">Migrations Home</a></li>
-									<li><a href="projects/migrations_news.html">Migrations News</a></li>
-								</ul>
-							</li>
-							<li class="parent"><a href="projects/scl.html">SCL Secondary</a>
-								<ul class="list-menu links vertical children">
-									<li><a href="projects/scl_home.html">SCL Home</a></li>
-									<li><a href="projects/scl_landing.html">SCL Landing Page</a></li>
-									<li><a href="projects/scl_sublanding.html">SCL Sublanding Page</a></li>
-									<li><a href="projects/scl_psc.html">SCL Public Service</a></li>
-								</ul>
-							</li>
-							<li class="menu-section parent"><a href="#">Archive</a>
-								<ul class="list-menu links vertical children">
-									<li class="parent"><a href="projects/china.html">China Center Splash Page</a>
-										<ul class="list-menu links vertical children">
-											<li><a href="projects/china_carousel.html">China Center with Carousel</a></li>
-										</ul>
-									</li>
-									<li class="parent"><a href="projects/cti.html">CTI Secondary</a>
-										<ul class="list-menu links vertical children">
-											<li><a href="projects/cti_home.html">CTI Home</a></li>
-											<li><a href="projects/cti_impact.html">CTI Editorial</a></li>
-											<li><a href="projects/cti_landing.html">CTI Landing Page</a></li>
-											<li><a href="projects/cti_people.html">CTI People Page</a></li>
-										</ul>
-									</li>
-									<li><a href="projects/delegate.html">Delegate App</a></li>
-									<li><a href="projects/emn.html">EMN Preferences</a></li>
-									<li><a href="projects/feeney.html">Feeney iPad Kiosk</a></li>
-									<li class="parent"><a href="projects/grad.html">Grad Secondary</a>
-										<ul class="list-menu links vertical children">
-											<li><a href="projects/grad_home.html">Grad Home</a></li>
-											<li><a href="projects/grad_impact.html">Grad Editorial</a></li>
-											<li><a href="projects/grad_lockups.html">Grad Lockups</a></li>
-										</ul>
-									</li>
-									<li class="parent"><a href="projects/hudson.html">Hudson Secondary</a>
-										<ul class="list-menu links vertical children">
-											<li><a href="projects/hudson_home.html">Hudson Home</a></li>
-										</ul>
-									</li>
-									<li class="parent"><a href="projects/wildlife.html">Wildlife Secondary</a>
-										<ul class="list-menu links vertical children">
-											<li><a href="projects/wildlife_home.html">Wildlife Home</a></li>
-											<li><a href="projects/wildlife_impact.html">Wildlife Editorial</a></li>
-											<li><a href="projects/wildlife_program.html">Wildlife Program Page</a></li>
-											<li><a href="projects/wildlife_people.html">Wildlife People Page</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</nav>
+			<nav class="dropdown-menu dropdown-menu-on-demand" id="main-navigation" aria-label="Main Navigation">
+				<div class="container-fluid">
+					<a id="mobile-home" href="#"><span class="sr-only">Home</span></a>
+					<ul class="list-menu links">
+						<li class="active parent"><a href="index.html">Template</a>
+							<ul class="list-menu links vertical children">
+								<li><a href="index21.html">Template (2021 Components)</a></li>
+							</ul>
+						</li>
+						<li class="parent"><a href="style.html">Styleguide</a>
+							<ul class="list-menu links vertical children">
+								<li><a href="patterns.html">Design Patterns</a></li>
+								<li><a href="patterns_people.html">People</a></li>
+								<li><a href="forms.html">Forms</a></li>
+								<li><a href="tables.html">Tables (Responsive)</a></li>
+								<li><a href="style_customer.html">Customer Styleguide</a></li>
+							</ul>
+						</li>
+						<li class="parent"><a href="drupal.html">Drupal Components</a>
+							<ul class="list-menu links vertical children">
+								<li><a href="cms_drupal.html">Drupal CMS</a></li>
+							</ul>
+						</li>
+						<li><a href="js.html">Scripted Components</a></li>
+						<li class="parent"><a href="#">Tone's Projects</a>
+							<ul class="list-menu links vertical children">
+								<li><a href="projects/project.html">Starter Project</a></li>
+								<li class="menu-section"><a href="login_cuwa.html">CU Login</a></li>
+								<li class="menu-section parent"><a href="projects/cbb.html">Bright Beams Secondary</a>
+									<ul class="list-menu links vertical children">
+										<li><a href="projects/cbb_home.html">Bright Beams Home</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="projects/diversity.html">Diversity Secondary</a>
+									<ul class="list-menu links vertical children">
+										<li><a href="projects/diversity_home.html">Diversity Home</a></li>
+										<li><a href="projects/diversity_belonging.html">Diversity Belonging</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="projects/einaudi.html">Einaudi Secondary</a>
+									<ul class="list-menu links vertical children">
+										<li><a href="projects/einaudi_home.html">Einaudi Home</a></li>
+										<li><a href="projects/einaudi_program.html">Einaudi Program</a></li>
+										<li class="menu-section"><a href="projects/einaudi_home_global.html">Einaudi-Global Home</a></li>
+										<li><a href="projects/einaudi_program_global.html">Einaudi-Global Program</a></li>
+										<li><a href="projects/einaudi_global.html">Einaudi-Global Secondary</a></li>
+										<li><a href="projects/einaudi_global_landing.html">Einaudi-Global Landing</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="projects/fcs.html">FCS Secondary</a>
+									<ul class="list-menu links vertical children">
+										<li><a href="projects/fcs_home.html">FCS Home</a></li>
+										<li><a href="projects/fcs_ct.html">FCS Components</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="projects/ogl.html">Global Learning Secondary</a>
+									<ul class="list-menu links vertical children">
+										<li><a href="projects/ogl_home.html">Global Learning Home</a></li>
+										<li><a href="projects/ogl_search.html">Global Learning Search</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="projects/itc.html">IT@Cornell</a>
+									<ul class="list-menu links vertical children">
+										<li><a href="projects/itc_home.html">IT@Cornell Home</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="projects/lassp.html">LASSP Secondary</a>
+									<ul class="list-menu links vertical children">
+										<li><a href="projects/lassp_home.html">LASSP Home</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="projects/migrations.html">Migrations Secondary</a>
+									<ul class="list-menu links vertical children">
+										<li><a href="projects/migrations_home.html">Migrations Home</a></li>
+										<li><a href="projects/migrations_news.html">Migrations News</a></li>
+									</ul>
+								</li>
+								<li class="parent"><a href="projects/scl.html">SCL Secondary</a>
+									<ul class="list-menu links vertical children">
+										<li><a href="projects/scl_home.html">SCL Home</a></li>
+										<li><a href="projects/scl_landing.html">SCL Landing Page</a></li>
+										<li><a href="projects/scl_sublanding.html">SCL Sublanding Page</a></li>
+										<li><a href="projects/scl_psc.html">SCL Public Service</a></li>
+									</ul>
+								</li>
+								<li class="menu-section parent"><a href="#">Archive</a>
+									<ul class="list-menu links vertical children">
+										<li class="parent"><a href="projects/china.html">China Center Splash Page</a>
+											<ul class="list-menu links vertical children">
+												<li><a href="projects/china_carousel.html">China Center with Carousel</a></li>
+											</ul>
+										</li>
+										<li class="parent"><a href="projects/cti.html">CTI Secondary</a>
+											<ul class="list-menu links vertical children">
+												<li><a href="projects/cti_home.html">CTI Home</a></li>
+												<li><a href="projects/cti_impact.html">CTI Editorial</a></li>
+												<li><a href="projects/cti_landing.html">CTI Landing Page</a></li>
+												<li><a href="projects/cti_people.html">CTI People Page</a></li>
+											</ul>
+										</li>
+										<li><a href="projects/delegate.html">Delegate App</a></li>
+										<li><a href="projects/emn.html">EMN Preferences</a></li>
+										<li><a href="projects/feeney.html">Feeney iPad Kiosk</a></li>
+										<li class="parent"><a href="projects/grad.html">Grad Secondary</a>
+											<ul class="list-menu links vertical children">
+												<li><a href="projects/grad_home.html">Grad Home</a></li>
+												<li><a href="projects/grad_impact.html">Grad Editorial</a></li>
+												<li><a href="projects/grad_lockups.html">Grad Lockups</a></li>
+											</ul>
+										</li>
+										<li class="parent"><a href="projects/hudson.html">Hudson Secondary</a>
+											<ul class="list-menu links vertical children">
+												<li><a href="projects/hudson_home.html">Hudson Home</a></li>
+											</ul>
+										</li>
+										<li class="parent"><a href="projects/wildlife.html">Wildlife Secondary</a>
+											<ul class="list-menu links vertical children">
+												<li><a href="projects/wildlife_home.html">Wildlife Home</a></li>
+												<li><a href="projects/wildlife_impact.html">Wildlife Editorial</a></li>
+												<li><a href="projects/wildlife_program.html">Wildlife Program Page</a></li>
+												<li><a href="projects/wildlife_people.html">Wildlife People Page</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
 		
-	</header>
+		</header>
+	</div>
 
 	<div id="main-content" class="band">
 		<main id="main" class="container-fluid aria-target" tabindex="-1">
@@ -200,6 +206,7 @@
 				<div id="sidebar-top" class="secondary">
 					<h2>Sidebar (Priority)</h2>
 					<p>To move the sidebar to the left, you can use the body class options documented on this page, under <a href="#classes-body-layout">Body Classes > Layout</a>.</p>
+					<p>This sidebar region appears <strong>before</strong> the main article when viewed at mobile sizes.</p>
 				</div>
 				<article id="main-article" class="primary">
 					<div id="breadcrumb-navigation">
@@ -277,50 +284,7 @@
 				<div id="sidebar-bottom" class="secondary" role="complementary">
 					<h2>Sidebar (Secondary)</h2>
 					
-					<h3>Change Log</h3>
-					<p>Recent additions and revisions (major items only):</p>
-					<ul class="smallprint custom">
-						<li>7/1/19: The main body footer can now be given an ID of <code>#body-footer</code>. Styles that previously applied to <code>body > footer</code> now apply to this ID as well (so the <code>&lt;footer&gt;</code> no longer needs to be a direct child of <code>&lt;body&gt;</code>). The old <code>body > footer</code> still works for backward compatibility with older projects.</li>
-						<li>7/1/19: New <code>.one-column-article</code> body class option added to create single column designs with a modern news article feel (limited max content width, figures and blockquotes offset into the gutters). As a compliment to this, a new <code>.full-window</code> image option was added to make images within the main article (typically a WYSIWYG region) break out of the content container to the full width of the window. Both of these options can be seen on the <a href="projects/migrations.html">Migrations "New Approach" page</a> (scroll down a bit to see the full-window image).</li>
-						<li>5/31/19: Accessibility Improvements:
-							<ol>
-								<li>Fieldset added to Cornell search radio buttons (and CSS adjusted to accommodate).</li>
-								<li><s><code>&lt;nav&gt;</code> tag/landmark added to Skip to Content link.</s></li>
-								<li><code>aria-label</code> attributes added back to various landmarks (headers and complementary regions). <span class="text-black text-weight-semibold text-uppercase">Note:</span> The disruptive effect this can have on Voiceover seems to have been resolved by Apple in the past year or so, but Tone&reg; Laboratories will continue to monitor the situation closely, and reserves the right to remove these labels again in the future should the need arise!</li>
-								<li>The off-canvas "Home" link that is included in the main navigation has been removed from the DOM at desktop sizes. This link serves as a Home button in the mobile version of the navigation, but it could still receive focus in the desktop design without appearing visually, creating an unintended focus mystery.</li>
-								<li>The mobile main navigation overlay will now respond to an Escape key press to dismiss and return focus to the page. While this navigation is meant for mobile touch screens, it is still possible for it to be used on desktop or other keyboard-attached devices (through scaling or perhaps some form of assistive technology).</li>
-							</ol>
-						</li>
-						<li>5/22/19: New Custom Lists styles (<code>style.html</code>).</li>
-						<li>5/2/19: Tightened up color contrast in Drupal Components (<code>drupal.html</code>).</li>
-						<li>4/10/19: New form styles (documentation pending).</li>
-						<li>3/21/19: New content styles: Impact Blockquote, Custom Lists (<code>style.html</code>).</li>
-						<li>3/13/19: Designer Links revamped for consistent appearance across fonts (<code>drupal.html</code>).</li>
-						<li>3/13/19: Wide Thumbnails option added to Rows pattern (<code>drupal.html</code>).</li>
-						<li>2/25/19: Expander and Content Tabs ported from CSSF 2015 and enhanced (<code>cwd_utilities.js</code>).</li>
-						<li>1/29/19: Slider now supports an optional second heading, separate from the slider caption target. This was needed for Office of Global Learning. (<code>cwd_slider.js</code>).</li>
-						<li>1/29/19: Mobile navigation updated to render the utility nav when no main nav is present (<code>cwd_utilities.js</code>).</li>
-						<li>1/8/19: Starter stylesheet added for the Freight font family (<code>freight.scss</code>).</li>
-					</ul>
-					
-					<h3>Wishlist</h3>
-					<p>Tone's todos and requests from the Custom Dev team:</p>
-					<ul class="smallprint custom">
-						<li>Convert <code>body > footer</code> selectors to an ID-based page footer for easier compatibility with Drupal.</li>
-						<li>Video gallery modal size is not updating properly when navigating from image to video (this was working before, so it needs investigation to see what's going on).</li>
-						<li>Additional accessible main navigation options (e.g., on-demand submenu nav, megamenu).</li>
-						<li>Additional work on custom forms and documentation.</li>
-						<li>Longform WA footer.</li>
-						<li>Refinements/fixes to Card Slider.</li>
-						<li>Fix sidebar padding when using .sidebar-tint without .sidebar-tint-edge</li>
-						<li>Automate mobile table scroller functionality somehow?</li>
-						<li>Convert Mobile Expander toggle from <code>&lt;a&gt;</code> to <code>&lt;button&gt;</code>.</li>
-					</ul>
-					<p>Probably not until next generation:</p>
-					<ul class="smallprint custom">
-						<li>Convert media query breakpoints to sensible values, rather than the puzzling set that came from Bootstrap (992px? Whuh?).</li>
-						<li>Reorganize and convert Sass to nested format, possibly broken out into component partials.</li>
-					</ul>
+					<p>This sidebar region appears <strong>after</strong> the main article when viewed at mobile sizes.</p>
 				</div>
 			</div>
 				
@@ -358,8 +322,20 @@
 		<div class="sub-footer">
 			<div class="container-fluid sidebar-left">
 				<div class="row">
-					<div class="content footer-accessibility vertical-align">
-						<p>If you have a disability and are having trouble accessing information on this website or need materials in an alternate format, contact <a href="mailto:web-accessibility@cornell.edu">web-accessibility@cornell.edu</a> for assistance.</p>
+					<div class="content">
+						<div class="two-col">
+							<div>
+								<ul class="custom inline no-bullet">
+									<li><a href="https://www.cornell.edu">Cornell University</a> ©2021</li>
+									<li><a href="https://privacy.cornell.edu/">University Privacy</a></li>
+								</ul>
+							</div>
+							<div>
+								<ul class="custom inline no-bullet">
+									<li><a href="mailto:web-accessibility@cornell.edu">Web Accessibility Assistance</a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

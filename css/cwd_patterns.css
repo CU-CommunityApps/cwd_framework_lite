@@ -1192,6 +1192,18 @@ a.link-button {
 .dark .cwd-events .location {
   color: #ddd; }
 
+.cwd-news .date:before {
+  content: '';
+  background: #b31b1b;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0.2em 0.2em 0 0; }
+
+.cwd-news.full .date:before {
+  width: 11px;
+  height: 11px; }
+
 .cwd-people .subheading-secondary {
   font-size: 11px;
   color: #707070; }

@@ -71,7 +71,8 @@
 					<ul class="list-menu links">
 						<li class="active parent"><a href="index.html">Template</a>
 							<ul class="list-menu links vertical children">
-								<li><a href="index21.html">Template (2021 Components)</a></li>
+								<li><a href="index21.html"><abbr title="In-Development/Experimental">DEV</abbr> Template (2021 Components)</a></li>
+								<li><a href="index_experimental.html"><abbr title="In-Development/Experimental">DEV</abbr> Experiments</a></li>
 							</ul>
 						</li>
 						<li class="parent"><a href="style.html">Styleguide</a>
@@ -80,7 +81,7 @@
 								<li><a href="patterns_people.html">People</a></li>
 								<li><a href="forms.html">Forms</a></li>
 								<li><a href="tables.html">Tables (Responsive)</a></li>
-								<li><a href="style_customer.html">Customer Styleguide</a></li>
+								<li><a href="style_customer.html"><abbr title="In-Development/Experimental">DEV</abbr> Customer Styleguide</a></li>
 							</ul>
 						</li>
 						<li class="parent"><a href="drupal.html">Drupal Components</a>
@@ -117,6 +118,7 @@
 								<li class="parent"><a href="projects/fcs.html">FCS Secondary</a>
 									<ul class="list-menu links vertical children">
 										<li><a href="projects/fcs_home.html">FCS Home</a></li>
+										<li><a href="projects/fcs_home_slider.html">FCS Home 2022</a></li>
 										<li><a href="projects/fcs_ct.html">FCS Components</a></li>
 									</ul>
 								</li>
@@ -341,6 +343,28 @@
 			</div>
 		</div>
 	</footer>
+	
+	<style class="for-mel">
+		@media (min-width: 768px) {
+		
+			body > footer .main-footer, #body-footer .main-footer {
+				padding: 0; /* remove footer padding */
+			}
+			body > footer .main-footer .container-fluid:after, #body-footer .main-footer .container-fluid:after {
+				border: 0; /* remove the standard divider */
+				
+				/* thrilling heroics! */
+				background: #444; /* the accent color */
+				width: 50vw;
+				box-shadow: 50vw 0 0 0 #444; /* repeat the accent color here */
+			}
+			.main-footer .primary, .main-footer .secondary {
+				padding-top: 45px; /* reapply the padding that was removed from the footer */
+				padding-bottom: 45px; /* reapply the padding that was removed from the footer */
+			}
+		
+		}
+	</style>
 	
 	<!-- jQuery and Contributed Components -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

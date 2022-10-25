@@ -1,0 +1,246 @@
+// CWD Component: Megamenu option for Main Navigation
+// ---------------------------------------------------------------------------
+// Recommended breakpoints to match base theme:
+// @media (min-width: 321px) - above 3.5" phones begins
+// @media (min-width: 480px)
+// @media (min-width: 624px)
+// @media (min-width: 768px) - tablet begins, sidebar begins
+// @media (min-width: 992px) - desktop main navigation begins
+// @media (min-width: 1080px)
+// @media (min-width: 1200px)
+// @media (min-width: 1400px) - maximum content width begins
+
+$project-font-family-sans-serif: $cornell-font-family-sans-serif !default;
+$project-font-family-sans-alt: $cornell-font-family-sans-serif !default;
+$project-font-family-sans-ui: $cornell-font-family-sans-serif !default;
+$project-font-family-serif: $cornell-font-family-serif !default;
+$project-font-family-serif-alt: $cornell-font-family-serif !default;
+$project-color-link: $cwd-color-link; // default text link color
+$project-color-link-hover: $cwd-color-link-hover; // text link :hover color (also used for :focus)
+$project-color-link-active: $cwd-color-link-active; // text link :active color
+$project-color-button: $cwd-color-button; // default button link color
+$project-color-button-hover: $cwd-color-button-hover; // text button :hover color (also used for :focus)
+$project-color-button-active: $cwd-color-button-active; // text button :active color
+
+
+// Component Class (designed to apply to #main-navigation)
+#main-navigation.dropdown-megamenu {
+	$scope: &;
+	
+	@media (min-width: 992px) {
+		.top-level-li {
+			position: static !important;
+			
+				// light mode
+// 				@at-root #{$scope}.megamenu-light .top-level-li:hover > a {
+// 					background: #f7f7f7;
+// 					background: linear-gradient(to bottom, #eaeaea 0%,#f7f7f7 100%);
+// 					color: #000;
+// 				}
+			
+			ul, li {
+				border: 0 !important;
+				box-shadow: none;
+			}
+			
+			& > .children {
+				width: auto;
+				max-width: 1280px;
+				left: 60px;
+				right: 60px;
+				border: 0;
+				padding: 0 1.5em;
+				background: #555;
+					// light mode
+					@at-root #{$scope}.megamenu-light .top-level-li > .children {
+						background: #f7f7f7;
+						border: 1px solid #dedede !important;
+						border-width: 0 1px !important;
+					}
+				overflow: hidden;
+				box-shadow: 0 10px 20px rgba(0,0,0,0.04), 0 1px 0 rgba(0,0,0,0.25);
+				//box-shadow: -50vw 0 0 #555, 50vw 0 0 #555, -25vw 0 0 #555, 25vw 0 0 #555; // extend to full window width
+
+				display: grid;
+				gap: 0 15px;
+				grid-template-rows: auto;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-areas: 
+					'spacer spacer spacer'
+					'col1 col2 col3'
+					'col1 col2 col3'
+					'col1 col2 col3'
+					'col1 col2 col3'
+					'col1 col2 col3'
+					'col1 col2 col3'
+					'col1 col2 col3'
+					'col1 col2 col3'
+					'end end end';
+				
+				&:before { // spacer
+					content: '';
+					display: block;
+					width: 100%;
+					height: 2em;
+					grid-area: spacer;
+				}
+				.fa {
+					display: none;
+				}
+				
+				& > li {
+					color: #ccc;
+						// light mode
+						@at-root #{$scope}.megamenu-light .top-level-li > .children > li {
+							color: #666;
+						}
+					font-family: $project-font-family-serif;
+					font-size: 20px;
+					margin: 0 0 2em;
+					
+					li {
+						margin: 0 0 0.4em;
+					}
+				}
+				.children {
+					background: none;
+					position: revert !important;
+					overflow: revert;
+					height: revert;
+					opacity: 1;
+					z-index: 101;
+					width: 100%;
+					min-width: revert;
+					max-width: revert;
+					margin: 1em 0 0 !important;
+					
+					.children {
+						display: none !important; // the megamenu concept does not support beyond 3 levels
+					}
+				}
+				a {
+					display: revert;
+					padding: revert;
+					background: none;
+					color: #fff;
+					text-decoration: underline;
+					text-decoration-thickness: 1px;
+					text-underline-offset: 0.125em;
+					text-decoration-color: rgba(255,255,255,0.3);
+						// light mode
+						@at-root #{$scope}.megamenu-light .top-level-li > .children a:not(.link-button) {
+							color: #000;
+							text-decoration-color: rgba(0,0,0,0.12);
+						}
+					
+					// @todo: figure out Safari hover bug
+					
+					&:hover {
+						background: none;
+						//text-decoration: underline;
+						text-decoration-thickness: 1px;
+						text-underline-offset: 0.125em;
+						text-decoration-color: rgba(255,255,255,0.85);
+							// light mode
+							@at-root #{$scope}.megamenu-light .top-level-li > .children a:not(.link-button):hover {
+								text-decoration-color: rgba(0,0,0,0.7);
+							}
+					}
+					&:active {
+						background: none;
+						color: #aaa;
+						//text-decoration: underline;
+						text-decoration-thickness: 1px;
+						text-underline-offset: 0.125em;
+						text-decoration-color: rgba(255,255,255,0.3);
+							// light mode
+							@at-root #{$scope}.megamenu-light .top-level-li > .children a:not(.link-button):active {
+								color: #707070;
+								text-decoration-color: rgba(0,0,0,0.4);
+							}
+					}
+				}
+			}
+		}
+		.menu-section {
+			border: 0 !important;
+		}
+	}
+	@media (min-width: 1400px) {
+		.top-level-li {
+			
+			& > .children {
+				width: 1280px;
+				left: calc(50vw - 640px - (50vw - 50%));
+				right: calc(50vw - 640px - (50vw - 50%));
+			}
+		}
+	}
+	
+	
+	
+	
+	// Container Class Options ---------------------------------
+	//&.xx
+	
+}
+
+// Menu Feature
+#main-navigation .top-level-li > .children > li.menu-feature {
+	background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%) !important;
+	padding: 20px 1.5em 24px 2.25em;
+	line-height: 1.4 !important;
+	margin-left: -2.25em;
+	width: calc(100% + 2.25em);
+	font-family: $project-font-family-sans-serif;
+	
+	@media (min-width: 992px) {
+		font-size: 17px;
+		grid-area: 2 / 3 / span end / 3;
+		padding: 0 0 0 1.25em;
+		margin-left: revert;
+		width: revert;
+		background: rgba(0,0,0,0.1) !important;
+		box-shadow: 1.5em 0 0 2em rgba(0,0,0,0.1);
+			// light mode
+			@at-root #main-navigation.megamenu-light .top-level-li > .children > li.menu-feature {
+				background: rgba(0,0,0,0.04) !important;
+				box-shadow: 1.5em 0 0 2em rgba(0,0,0,0.04);
+				color: #000;
+			}
+		
+		.feature-content {
+			
+		}
+	}
+	@media (min-width: 1200px) {
+		font-size: 18px;
+	}
+	
+	h2 {
+		font-family: $project-font-family-serif;
+		font-size: 24px;
+		margin: -0.1em 0 0.5em;
+		
+		@media (min-width: 1200px) {
+			font-size: 26px;
+		}
+	}
+	p {
+		
+	}
+	.link-button {
+		padding: 0.5em 0.9em !important;
+		line-height: revert !important;
+		text-decoration: none;
+		display: inline-block;
+		background: $project-color-button !important;
+		
+		&:hover {
+			background: $project-color-button-hover !important;
+		}
+		&:active {
+			background: $project-color-button-active !important;
+		}
+	}
+}

@@ -654,6 +654,10 @@
 				box-shadow: none !important;
 			}
 		}
+		&.slide-mobile .card, 
+		&.slide-mobile .card:first-of-type {
+			padding-top: 0px;
+		}
 	}
 	
 	
